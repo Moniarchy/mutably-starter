@@ -23,6 +23,8 @@ $(document).ready(function(){
       displaySection.appendChild(pokemonImage)
     })
   }
+  //a form that is displayed and hidden depending on which request has been toggled
+  const addPokemonForm = document.querySelectorAll('.add-pokemon')[0]
 
   //options for the fetch to take
   const initObject = {
@@ -43,7 +45,8 @@ $(document).ready(function(){
 
   //this button triggers a fetch that makes a get request
   getAllPokemonButton.addEventListener('click', function() {
-    //hide the eventual form
+    //hide the form
+    addPokemonForm.style.display = 'none'
     fetch("https://mutably.herokuapp.com/pokemon", initObject)
     // .then(function(data) {
     //   if (!data.ok) {
