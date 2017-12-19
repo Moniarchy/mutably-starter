@@ -5,10 +5,10 @@ $(document).ready(function(){
   //selects the buttons to toggle the fetch get and post requests, respectively
   const getAllPokemonButton = document.querySelectorAll('.get-pokemon-button')[0]
   const addAPokemonButton = document.querySelectorAll('.add-pokemon-button')[0]
+  const displaySection = document.querySelectorAll('.list')[0]
 
   //This gets used inside the fetch below that makes a get request
   const showPokemon = function(data) {
-    const displaySection = document.querySelectorAll('.list')[0]
 
     data.pokemon.forEach(function(pokemon) {
       const pokemonName = document.createElement('li')
@@ -39,14 +39,14 @@ $(document).ready(function(){
   //this button triggers a fetch that makes a post request
   addAPokemonButton.addEventListener('click', function() {
     //hide the list of pokemon
-    //show the form
-    console.log('bye')
+    displaySection.style.display = 'none'
+    addPokemonForm.style.display = 'block'
   })
 
   //this button triggers a fetch that makes a get request
   getAllPokemonButton.addEventListener('click', function() {
-    //hide the form
     addPokemonForm.style.display = 'none'
+    displaySection.style.display = 'block'
     fetch("https://mutably.herokuapp.com/pokemon", initObject)
     // .then(function(data) {
     //   if (!data.ok) {
