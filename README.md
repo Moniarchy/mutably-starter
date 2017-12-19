@@ -6,8 +6,8 @@ For goal #383
 2. `npm start` to run (uses nodemon)
 
 ## Specifications
--[] Your repo is a fork of mutably-starter.
--[] Your repo has a README with instructions for how to run your project.
+-[X] Your repo is a fork of mutably-starter.
+-[X] Your repo has a README with instructions for how to run your project.
 -[] Your app is SPA (single page app). All CRUD actions take place on the same page, preferably the root (/) route.
 -[] All interaction with the API happens with the fetch API -- don't submit data via forms. You can use form html tags, but do all your form submission in your js. Make use of jQuery's event.preventDefault().
 -[] A user can read and display all the data for a resource.
